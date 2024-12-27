@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import {  Montserrat  } from 'next/font/google'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/next'
 
 const font = Montserrat({ subsets: ['latin'], weight:['400','700']})
 
