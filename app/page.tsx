@@ -3,12 +3,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
       <div className="text-center max-w-4xl mx-auto px-4">
+
+
         {/* Logo container */}
-        <div className="mb-16">
+        <div className="mb-24">
           <img 
           src="/capia-logo.png" 
-            alt="Capia.ai Logo" 
-            className="mx-auto h-60 object-contain"
+          alt="Capia.ai Logo" 
+          className="mx-auto h-60 object-contain"
+          fetchPriority='high'  
           />
         </div>
 
@@ -23,7 +26,7 @@ export default function Home() {
         </p>
 
         {/* Newsletter Section */}
-        <div className="max-w-lg mx-auto bg-gradient-to-r from-[#048fd5]/5 to-[#F3F4F6]/5  p-8 rounded-lg shadow-sm">
+        <div className="max-w-lg mx-auto bg-gradient-to-r from-[#048fd5]/5 to-[#F3F4F6]/5  p-8 rounded-lg shadow-sm mb">
           <h2 className="text-lg font-semibold text-[#323c57] mb-2">
           <GrowthEmoji /> Be the First to Know!
           </h2>

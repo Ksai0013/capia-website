@@ -5,7 +5,7 @@ import './globals.css'
 const font = Montserrat({ subsets: ['latin'], weight:['400','700']})
 
 export const metadata = {
-  title: 'Capia.ai',
+  title: 'CapIA',
   description: 'Your fintech solution',
   icons: {
     icon: [
