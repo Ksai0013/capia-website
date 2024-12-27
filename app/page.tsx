@@ -53,7 +53,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="absolute bottom-4 text-gray-400">
+      <footer className="fixed bottom-0 w-full bg-gray-100 text-center py-4 text-gray-400">
         © 2024 Capia.ai. All rights reserved.
       </footer>
     </div>
