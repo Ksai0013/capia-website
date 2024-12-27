@@ -13,7 +13,7 @@ export const metadata = {
       { url: '/favicon.png', type: 'image/png', sizes: '192x192' },
     ],
     shortcut: '/favicon.ico',
-    apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+    apple: { url: '/apple-touch-icon.png', sizes: '192x192' },
   },
   manifest: '/manifest.json',
 };
