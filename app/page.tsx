@@ -46,7 +46,7 @@ export default function Home() {
           <img 
             src="/capia-logo.png" 
             alt="Capia.ai Logo" 
-            className="mx-auto h-60 object-contain"
+            className="mx-auto h-80 object-contain"
             fetchPriority='high'  
           />
         </div>
