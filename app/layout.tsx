@@ -8,7 +8,7 @@
 
   export const metadata = {
     title: 'CapIA',
-    description: 'Your fintech solution',
+    description: 'Financial OS',
     icons: {
       icon: [
         { url: '/favicon.ico', sizes: 'any' },

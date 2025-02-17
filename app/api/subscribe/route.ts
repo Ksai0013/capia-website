@@ -1,14 +1,14 @@
 import { Pool } from 'pg';
 import { NextResponse } from 'next/server';
 
-// Create connection pool
 const pool = new Pool({
   connectionString: process.env.POSTGRES_URL
 });
 
 export async function POST(request: Request) {
   try {
-    const { email, screenResolution } = await request.json();
+    const data = await request.json();
+    const { email, name, company, role, screenResolution, isNewsletter } = data;
 
     // Basic validation
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -37,21 +37,29 @@ export async function POST(request: Request) {
       await client.query(`
         INSERT INTO subscribers (
           email,
+          name,
+          company,
+          role,
           ip_address,
           user_agent,
           referer,
           language,
           country,
-          screen_resolution
-        ) VALUES (\$1, \$2, \$3, \$4, \$5, \$6, \$7)
+          screen_resolution,
+          is_newsletter
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
       `, [
         email,
+        name || null,
+        company || null,
+        role || null,
         ip,
         userAgent,
         referer,
         language,
         geoData.country_name,
-        screenResolution
+        screenResolution,
+        isNewsletter || false
       ]);
 
       return NextResponse.json({ message: 'Subscription successful' });
