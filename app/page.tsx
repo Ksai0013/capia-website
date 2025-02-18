@@ -185,7 +185,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
    <div className="w-1/2">
    <div className="border-2 border-[#00b3e6]/50 rounded-lg p-4 bg-[#00b3e6]/10">  {/* Added border and background */}
      <Image
-       src="/Home.png"
+       src="/Home1.png"
        alt="CapIA.ai Dashboard Preview"
        width={1600}
        height={1200}
