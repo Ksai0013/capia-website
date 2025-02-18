@@ -152,26 +152,24 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
    {/* Left Column */}
    <div className="w-1/2 pr-8">
      <div className="mb-12">
-       <h1 className="text-6xl font-bold mb-2 ml-[30%]">
+       <h1 className="text-6xl font-bold mb-2 text-center">
          Cap<span className="text-[#00b3e6]">IA</span>.ai
        </h1>
-       <p className="text-2xl text-gray-300 ml-[10%]">  {/* Changed from cyan to gray */}
+       <p className="text-2xl text-gray-300 text-center">  {/* Changed from cyan to gray */}
          Smarter Finances, Faster Decisions, Profitable Growth
        </p>
      </div>
      <div className="h-10"></div>
      <div>
        <div className="mb-6">
-         <h2 className="text-5xl font-bold leading-tight text-white">
-           AI-Powered Financial Intelligence
+         <h2 className="text-5xl font-bold leading-tight text-white text-center">
+           AI-Powered Financial Intelligence for Startups
          </h2>
-         <h2 className="text-5xl font-bold leading-tight ml-[30%] text-white">
-           for Startups
-         </h2>
+        
        </div>
-       <p className="text-xl mb-8 text-gray-300">
+       <div className="text-xl mb-8 text-gray-300">
        Empower your startup with AI-driven financial clarity. Leverage real-time insights, predictive analytics, and automation to optimize cash, boost revenue, and drive growth.
-       </p>
+       </div>
        <div className="flex gap-4 ml-[32%]">
          <a href="#contact" className="bg-[#00b3e6] px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
            Sign Up for Alpha Access
