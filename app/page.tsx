@@ -42,14 +42,14 @@ export default function Home() {
       icon: <MdPeople />,
       title: "Customer Retention Analysis ",
       description: "Anticipate churn before it happens. Track engagement, identify at-risk accounts, and take decisive actions to improve retention.",
-      image: "/retention-pipeline.png"
+      image: "/retention-pipeline.webp"
     },
     {
       id: 4,
       icon: <MdAnalytics />,
       title: "Deals Pipeline Health",
       description: "Track deal progress and forecast pipeline conversion with machine learning accuracy.Prioritize high-probability deals, focus resources where they matter most, and accelerate revenue growth with precise pipeline predictions.",
-      image: "/revenue-forecast.png"
+      image: "/revenue-forecast.webp"
     }
   ];
   // For the newsletter form
@@ -185,7 +185,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
    <div className="w-1/2">
    <div className="border-2 border-[#00b3e6]/50 rounded-lg p-4 bg-[#00b3e6]/10">  {/* Added border and background */}
      <Image
-       src="/Home1.png"
+       src="/Home.webp"
        alt="CapIA.ai Dashboard Preview"
        width={1600}
        height={1200}
