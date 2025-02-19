@@ -36,13 +36,17 @@ export default function Home() {
       id: 1,
       icon: <MdQueryStats />,
       title: "Real-Time Revenue Insights",
+      subtitle:"Real-Time Revenue Insights",
+      keypoint: "Automated Revenue Recognition with real-time recognition of deferred revenue & late invoice tracking",
       description: "Instantly track revenue performance with AI-powered analytics. Compare realized vs. promised revenue, monitor payments, and uncover trends to drive smarter, data-driven growth.",
       image: revenueInsightsImg
     },
     {
       id: 2,
       icon: <MdPayments />,
-      title: "Payment Behavior Analysis", 
+      title: "Payment Behavior Analysis",
+      subtitle:"Predictive Analytics",
+      keypoint: "Revenue forecasting & Churn Prediction with CRM pipeline integration", 
       description: "Analyze payment patterns, predict issues, and optimize cash flow with AI-driven recommendations. Automate reminders and follow-ups to boost collections.",
       image: paymentAnalysisImg
     },
@@ -50,6 +54,8 @@ export default function Home() {
       id: 3,
       icon: <MdPeople />,
       title: "Customer Retention Analysis ",
+      subtitle:"Active Cash Flow Supervision",
+      keypoint: "Anomaly detection & Recommendation with Customer Segmentation & Smart-payment scheduling",
       description: "Anticipate churn before it happens. Track engagement, identify at-risk accounts, and take decisive actions to improve retention.",
       image: retentionPipelineImg
     },
@@ -116,7 +122,7 @@ export default function Home() {
       <Toaster position="top-center" />
 
       {/* Header */}
-      <header className="px-4 md:px-[5%] py-4 flex justify-between items-center border-b border-[#00b3e6]/50">
+      <header className="px-4 md:px-[5%] py-2 flex justify-between items-center border-b border-[#00b3e6]/50">
         <div className="flex items-center gap-2">
           <img 
             src={logoImg}
@@ -146,12 +152,12 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-<section className="min-h-screen px-4 md:px-[5%] py-8 md:py-12 bg-gradient-to-b from-black via-black to-gray-900">
+<section className="min-h-screen px-4 md:px-[5%] py-4 md:py-4 2xl:py-8 bg-gradient-to-b from-black via-black to-gray-900">
   {/* Change xl: breakpoint to 2xl: to maintain stacked layout until 1440px */}
   <div className="flex flex-col 2xl:flex-row gap-8 mb-12">
     {/* Left Column - Update width classes */}
     <div className="w-full 2xl:w-1/2 2xl:pr-8">
-      <div className="mb-8 md:mb-12">
+      <div className="mb-8 md:mb-12 2xl:mb-16">
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold mb-2 text-center">
           Cap<span className="text-[#00b3e6]">IA</span>.ai
         </h1>
@@ -203,7 +209,7 @@ export default function Home() {
           </div>
 
           {/* Feature Cards */}
-          <div className="px-4 md:px-[5%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="px-2 md:px-[1%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {features.slice(0, 3).map((feature) => (
               <div key={feature.id} className="bg-gradient-to-gray-900/50 backdrop-blur-sm rounded-lg p-6 text-center border border-white/50 hover:border-[#00b3e6] transition-colors">
                 <div className="flex flex-col items-center">
@@ -212,11 +218,11 @@ export default function Home() {
                       {feature.icon}
                     </span>
                     <h3 className="text-base md:text-lg lg:text-xl font-bold text-white">
-                      {feature.title}
+                      {feature.subtitle}
                     </h3>
                   </div>
                   <p className="text-sm md:text-base text-gray-300">
-                    {feature.description}
+                    {feature.keypoint}
                   </p>
                 </div>
               </div>
