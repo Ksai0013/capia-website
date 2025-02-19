@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Images
 const logoImg = '/logo.png';
 const homeImg = '/Home.webp';
-const revenueInsightsImg = '/revenue-insights.png';
-const paymentAnalysisImg = '/payment-analysis.png';
+const revenueInsightsImg = '/revenue-insights.webp';
+const paymentAnalysisImg = '/payment-analysis.webp';
 const retentionPipelineImg = '/retention-pipeline.webp';
 const revenueForecastImg = '/revenue-forecast.webp';
 
@@ -57,7 +57,7 @@ export default function Home() {
       id: 4,
       icon: <MdAnalytics />,
       title: "Deals Pipeline Health",
-      description: "Track deal progress and forecast pipeline conversion with machine learning accuracy. Prioritize high-probability deals, focus resources where they matter most, and accelerate revenue growth with precise pipeline predictions.",
+      description: "Track deal progress and forecast pipeline conversion with machine learning accuracy. Prioritize high-probability deals, focus resources where they matter most, and accelerate revenue growth.",
       image: revenueForecastImg
     }
   ];
@@ -146,49 +146,50 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="min-h-screen px-4 md:px-[5%] py-8 md:py-12 bg-gradient-to-b from-black via-black to-gray-900">
-        <div className="flex flex-col xl:flex-row gap-8 mb-12">
-          {/* Left Column */}
-          <div className="w-full xl:w-1/2 xl:pr-8">
-            <div className="mb-8 md:mb-12">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 text-center">
-                Cap<span className="text-[#00b3e6]">IA</span>.ai
-              </h1>
-              <div className="text-base md:text-lg lg:text-xl xl:text-2xl text-gray-300 text-center">
-                Smarter Finances, Faster Decisions, Profitable Growth
-              </div>
-            </div>
-
-            <div className="mb-8">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-white text-center mb-6">
-                AI-Powered Financial Intelligence for Startups
-              </h2>
-              <div className="text-base lg:text-lg xl:text-xl mb-8 text-gray-300">
-                Empower your startup with AI-driven financial clarity. Leverage real-time insights, predictive analytics, and automation to optimize cash, boost revenue, and drive growth.
-              </div>
-              <div className="flex justify-center">
-                <a href="#contact" className="text-sm md:text-base lg:text-lg bg-[#00b3e6] px-4 md:px-6 py-2 md:py-3 rounded-full hover:opacity-90 transition-opacity">
-                  Sign Up for Alpha Access
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Image */}
-          <div className="w-full xl:w-1/2">
-            <div className="border border-[#00b3e6]/50 rounded-lg bg-[#00b3e6]/10 !p-0 !m-0 overflow-hidden">
-              <img
-                src={homeImg}
-                alt="CapIA.ai Dashboard Preview"
-                className="w-full h-auto rounded-lg !p-0 !m-0"
-                style={{ 
-                  maxHeight: 'calc(100vh - 200px)',
-                  display: 'block'
-                }}
-              />
-            </div>
-          </div>
+<section className="min-h-screen px-4 md:px-[5%] py-8 md:py-12 bg-gradient-to-b from-black via-black to-gray-900">
+  {/* Change xl: breakpoint to 2xl: to maintain stacked layout until 1440px */}
+  <div className="flex flex-col 2xl:flex-row gap-8 mb-12">
+    {/* Left Column - Update width classes */}
+    <div className="w-full 2xl:w-1/2 2xl:pr-8">
+      <div className="mb-8 md:mb-12">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold mb-2 text-center">
+          Cap<span className="text-[#00b3e6]">IA</span>.ai
+        </h1>
+        <div className="text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-300 text-center">
+          Smarter Finances, Faster Decisions, Profitable Growth
         </div>
+      </div>
+
+      <div className="mb-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold leading-tight text-white text-center mb-6">
+          AI-Powered Financial Intelligence for Startups
+        </h2>
+        <div className="text-base lg:text-lg 2xl:text-xl mb-8 text-gray-300 text-center 2xl:text-left">
+          Empower your startup with AI-driven financial clarity. Leverage real-time insights, predictive analytics, and automation to optimize cash, boost revenue, and drive growth.
+        </div>
+        <div className="flex justify-center">
+          <a href="#contact" className="text-sm md:text-base lg:text-lg bg-[#00b3e6] px-4 md:px-6 py-2 md:py-3 rounded-full hover:opacity-90 transition-opacity">
+            Sign Up for Alpha Access
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Right Column - Image - Update width classes */}
+    <div className="w-full 2xl:w-1/2">
+      <div className="border border-[#00b3e6]/50 rounded-lg bg-[#00b3e6]/10 !p-0 !m-0 overflow-hidden">
+        <img
+          src={homeImg}
+          alt="CapIA.ai Dashboard Preview"
+          className="w-full h-auto rounded-lg !p-0 !m-0"
+          style={{ 
+            maxHeight: 'calc(100vh - 200px)',
+            display: 'block'
+          }}
+        />
+      </div>
+    </div>
+  </div>
 
         {/* Revenue360 Preview */}
         <div className="bg-gradient-to-gray-900 from-b to-black py-8 md:py-12 rounded-lg border border-[#00b3e6]/50">
@@ -257,73 +258,73 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Features Accordion */}
-        <div className="px-4 md:px-[5%]">
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Left side - Features */}
-            <div className="w-full lg:w-1/2">
-              {features.map((feature) => (
-                <motion.div
-                  key={feature.id}
-                  className={`mb-4 border border-[#00b3e6]/50 rounded-lg overflow-hidden
-                            ${activeFeature === feature.id ? 'bg-[#00b3e6]/10' : 'bg-gray-900/50'}`}
-                >
-                  <button
-                    className="w-full px-4 md:px-6 py-4 flex items-center justify-between text-left"
-                    onClick={() => setActiveFeature(feature.id)}
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="text-[#00b3e6] text-xl md:text-2xl">{feature.icon}</span>
-                      <h3 className="text-base md:text-xl font-semibold">{feature.title}</h3>
-                    </div>
-                    <motion.div
-                      animate={{ rotate: activeFeature === feature.id ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <MdExpandMore className="text-2xl text-[#00b3e6]" />
-                    </motion.div>
-                  </button>
+        {/* Features Accordion/Carousel Section */}
+<div className="px-4">
+  {/* Single column layout instead of flex-row */}
+  <div className="max-w-4xl mx-auto">
+    {features.map((feature) => (
+      <motion.div
+        key={feature.id}
+        className={`mb-6 border border-[#00b3e6]/50 rounded-lg overflow-hidden
+        ${activeFeature === feature.id ? 'bg-[#00b3e6]/10' : 'bg-gray-900/50'}`}
+      >
+        {/* Header/Title section */}
+        <button
+          className="w-full px-4 md:px-6 py-4 flex items-center justify-between text-left"
+          onClick={() => setActiveFeature(feature.id)}
+        >
+          <div className="flex items-center gap-3">
+            <span className="text-[#00b3e6] text-xl md:text-2xl">{feature.icon}</span>
+            <h3 className="text-base md:text-xl font-semibold">{feature.title}</h3>
+          </div>
+          <motion.div
+            animate={{ rotate: activeFeature === feature.id ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <MdExpandMore className="text-2xl text-[#00b3e6]" />
+          </motion.div>
+        </button>
 
-                  <AnimatePresence>
-                    {activeFeature === feature.id && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="px-4 md:px-6 pb-4"
-                      >
-                        <p className="text-sm md:text-base text-gray-300">{feature.description}</p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Right side - Feature Image */}
-            <div className="w-full lg:w-1/2">
+        {/* Content section - Now includes both text and image */}
+        <AnimatePresence>
+          {activeFeature === feature.id && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="px-4 md:px-6 pb-6"
+            >
+              {/* Description Text */}
+              <p className="text-sm md:text-base text-gray-300 mb-6">
+                {feature.description}
+              </p>
+              
+              {/* Feature Image */}
               <motion.div
-                key={activeFeature}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="border border-[#00b3e6]/50 rounded-lg bg-[#00b3e6]/10 !p-0 !m-0 overflow-hidden mt-8 lg:mt-24"
+                className="border border-[#00b3e6]/50 rounded-lg bg-[#00b3e6]/10 overflow-hidden"
               >
                 <img 
-                  src={features.find(f => f.id === activeFeature)?.image || features[0].image}
-                  alt="Feature Preview"
-                  className="w-full h-auto rounded-lg !p-0 !m-0"
+                  src={feature.image}
+                  alt={feature.title}
+                  className="w-full h-auto rounded-lg"
                   style={{ 
-                    maxHeight: 'calc(100vh - 300px)',
-                    display: 'block'
+                    maxHeight: '400px',
+                    objectFit: 'cover'
                   }}
                 />
               </motion.div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    ))}
+  </div>
+</div>
       </section>
 
       {/* Contact Section */}
