@@ -141,7 +141,7 @@ export default function Home() {
         </nav>
 
         <a href="#contact" className="text-sm md:text-base bg-[#00b3e6] px-4 md:px-6 py-1.5 rounded-full hover:opacity-90 transition-opacity whitespace-nowrap">
-          Join as an Alpha Customer
+          Alpha Customers
         </a>
       </header>
 
@@ -152,23 +152,23 @@ export default function Home() {
     {/* Left Column - Update width classes */}
     <div className="w-full 2xl:w-1/2 2xl:pr-8">
       <div className="mb-8 md:mb-12">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold mb-2 text-center">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold mb-2 text-center">
           Cap<span className="text-[#00b3e6]">IA</span>.ai
         </h1>
-        <div className="text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-300 text-center">
+        <div className="text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl text-gray-300 text-center">
           Smarter Finances, Faster Decisions, Profitable Growth
         </div>
       </div>
 
-      <div className="mb-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold leading-tight text-white text-center mb-6">
+      <div className="mb-6 2xl:mb-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold leading-tight text-white text-center mb-6">
           AI-Powered Financial Intelligence for Startups
         </h2>
-        <div className="text-base lg:text-lg 2xl:text-xl mb-8 text-gray-300 text-center 2xl:text-left">
+        <div className="text-base lg:text-lg xl:text-lg 2xl:text-xl mb-8 text-gray-300 text-center 2xl:text-left">
           Empower your startup with AI-driven financial clarity. Leverage real-time insights, predictive analytics, and automation to optimize cash, boost revenue, and drive growth.
         </div>
         <div className="flex justify-center">
-          <a href="#contact" className="text-sm md:text-base lg:text-lg bg-[#00b3e6] px-4 md:px-6 py-2 md:py-3 rounded-full hover:opacity-90 transition-opacity">
+          <a href="#contact" className="text-sm md:text-base lg:text-lg xl:text-lg bg-[#00b3e6] px-4 md:px-6 py-2 md:py-3 rounded-full hover:opacity-90 transition-opacity">
             Sign Up for Alpha Access
           </a>
         </div>
@@ -183,7 +183,7 @@ export default function Home() {
           alt="CapIA.ai Dashboard Preview"
           className="w-full h-auto rounded-lg !p-0 !m-0"
           style={{ 
-            maxHeight: 'calc(100vh - 200px)',
+            maxHeight: 'calc(100vh - 200px) xl:calc(100vh - 100px)',
             display: 'block'
           }}
         />
